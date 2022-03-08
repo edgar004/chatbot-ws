@@ -109,7 +109,7 @@ const HomePage = () => {
           <Button
             variant="contained"
             style={{
-              backgroundColor: "##3DEB5E",
+              backgroundColor: "#3DEB5E",
               color: "#fff",
               fontWeight: "bold",
             }}
