@@ -9,8 +9,8 @@ import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 import Avatar from "@material-ui/core/Avatar";
 
-import imgws from "../img/ws.png";
-import imgAvatar from "../img/avatar.jpg";
+import imgws from "../img1/ws.png";
+import imgAvatar from "../img1/avatar.jpg";
 import { Box } from "@material-ui/core";
 import { Redirect } from "react-router-dom";
 
