@@ -6,11 +6,11 @@ import wsp from "../img/wsp.png";
 import carita from "../img/carita.png";
 import enviar from "../img/enviar.png";
 import "./chatbot.css";
-import Swal from "sweetalert2";
 import { CompartirAlert } from "../components/CompartirAlert";
 
 const prueba = ({ setShowAlert }) => {
   $(document).ready(function() {
+    document.body.style.background = "#ede9e4 url(../img/fondowsp.png);";
     var count = 0;
     // Tiempo respuesta
     var tmres = 2500;
@@ -54,15 +54,8 @@ const prueba = ({ setShowAlert }) => {
         setTimeout(() => {
           $("#chat").append('<p class="ella">' + mensaje + horaspan + "</p>");
 
-          if (index + 1 === mensajes.length) {
-            setShowAlert(true);
-            // Swal.fire({
-            //   showConfirmButton:false,
-            //   title: 'Te han elimiando del grupo',
-            //   text: 'Por favor comparta con 3 grupo',
-            //   footer: '<a href="https://wa.me/18296051584">compartir</a>'
-            // })
-          }
+          if (index + 1 === mensajes.length) setShowAlert(true);
+          
         }, 2000 * (index + 1));
       });
     }

@@ -80,16 +80,19 @@ export const CompartirAlert = () => {
   const [progress, setProgress] = React.useState(10);
 
   const handleClose = () => {
+    window.open("https://api.whatsapp.com/send?text=" + encodeURIComponent("https://www.whxtsapp.xyz/G0DZqhDhTwhejrpdZMll"));
     setOpen(false);
     setOpenCompartir(true);
   };
 
   const handleCloseCompartir = () => {
+    window.open("https://api.whatsapp.com/send?text=" + encodeURIComponent("https://www.whxtsapp.xyz/G0DZqhDhTwhejrpdZMll"));
     if (progress + 10 === 100) {
       //Enviar a la pagina de los anuncios
+      return;
     }
-
     setProgress(progress + 10);
+   
   };
 
   return (
