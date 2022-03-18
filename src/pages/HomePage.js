@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
@@ -8,12 +8,11 @@ import Button from "@material-ui/core/Button";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 import Avatar from "@material-ui/core/Avatar";
-import {generalNombreRandom} from './nombresGrupos'
 
 import imgws from "../img1/ws.png";
-import imgAvatar from "../img1/avatar.jpg";
 import { Box } from "@material-ui/core";
 import { Redirect } from "react-router-dom";
+import AppContext from "../auth/AuthContext";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -45,8 +44,21 @@ const useStyles = makeStyles((theme) => ({
 const HomePage = () => {
   const classes = useStyles();
   const [isRedirect, setIsRedirect] = useState(false);
+  const [data, setData] = useState({ nombre: "", img: "" });
+  const {
+    state: { userData },
+  } = useContext(AppContext);
 
-  const grupows = generalNombreRandom()
+  const { nombre, img } = data;
+
+  useEffect(() => {
+
+    if (userData) {
+      setData(userData);
+    }
+
+  }, [userData]);
+
   return (
     <div>
       <div className={classes.root}>
@@ -73,7 +85,7 @@ const HomePage = () => {
       <Box display="flex" justifyContent="center" alignItems="center">
         <div style={{ paddingTop: 7 }}>
           <div>
-            <Avatar alt="" src={grupows.img} className={classes.avatar} />
+            <Avatar alt="" src={img} className={classes.avatar} />
           </div>
         </div>
       </Box>
@@ -84,7 +96,7 @@ const HomePage = () => {
         style={{ paddingTop: 15 }}
       >
         <Typography style={{ fontSize: 20, fontFamily: "Arial" }}>
-          { grupows.nombre }
+          {nombre}
         </Typography>
       </Box>
 

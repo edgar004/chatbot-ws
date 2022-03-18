@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import $ from "jquery";
 
 import imgAvatar from "../img1/avatar.jpg";
@@ -7,6 +7,7 @@ import carita from "../img/carita.png";
 import enviar from "../img/enviar.png";
 import "./chatbot.css";
 import { CompartirAlert } from "../components/CompartirAlert";
+import AppContext from "../auth/AuthContext";
 
 const prueba = ({ setShowAlert }) => {
   $(document).ready(function() {
@@ -55,7 +56,6 @@ const prueba = ({ setShowAlert }) => {
           $("#chat").append('<p class="ella">' + mensaje + horaspan + "</p>");
 
           if (index + 1 === mensajes.length) setShowAlert(true);
-          
         }, 2000 * (index + 1));
       });
     }
@@ -76,6 +76,19 @@ const prueba = ({ setShowAlert }) => {
 
 const Chat = () => {
   const [showAlert, setShowAlert] = useState(false);
+  const [data, setData] = useState({ nameChat: "" });
+  const {
+    state: { userData },
+  } = useContext(AppContext);
+
+  const { nameChat } = data;
+
+  useEffect(() => {
+    if (userData) {
+      setData(userData);
+    }
+  }, [userData]);
+
   prueba({ setShowAlert });
 
   return (
@@ -83,7 +96,7 @@ const Chat = () => {
       <a className="llamada" href="http://bit.do/fbportable">
         <div className="wsptit">
           <h1>
-            <img src={wsp} /> Llamada de WhatsApp
+            <img alt="" src={wsp} /> Llamada de WhatsApp
           </h1>
           <h2>Rosa APIT</h2>
           <h3>Entrante</h3>
@@ -91,9 +104,9 @@ const Chat = () => {
       </a>
       <div id="cab">
         <div className="avatar">
-          <img src={imgAvatar} />
+          <img alt="" src={imgAvatar} />
           <div className="nombre">
-            <h2>Sex parties nearby 👏</h2>
+            <h2>{nameChat}</h2>
           </div>
         </div>
       </div>
@@ -101,7 +114,7 @@ const Chat = () => {
         <p className="ella"></p>
       </div>
       <div className="escribir">
-        <img src={carita} title="No disponible" />
+        <img alt="" src={carita} title="No disponible" />
         <input
           readOnly
           type="text"
@@ -110,7 +123,7 @@ const Chat = () => {
           placeholder="Escribe un mensaje aquí"
         />
         <button type="button" id="enviar">
-          <img src={enviar} style={{ marginTop: "3px" }} />
+          <img alt="" src={enviar} style={{ marginTop: "3px" }} />
         </button>
       </div>
       {showAlert && <CompartirAlert />}
