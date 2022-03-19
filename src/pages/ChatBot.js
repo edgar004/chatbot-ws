@@ -1,17 +1,17 @@
 import React, { useContext, useEffect, useState } from "react";
 import $ from "jquery";
 
-import imgAvatar from "../img1/avatar.jpg";
 import wsp from "../img/wsp.png";
 import carita from "../img/carita.png";
 import enviar from "../img/enviar.png";
 import "./chatbot.css";
 import { CompartirAlert } from "../components/CompartirAlert";
 import AppContext from "../auth/AuthContext";
-
+import Background from '../img/fondowsp.png';
 const prueba = ({ setShowAlert }) => {
   $(document).ready(function() {
-    document.body.style.background = "#ede9e4 url(../img/fondowsp.png);";
+    document.body.style.background = "#ede9e4";
+    document.body.style.backgroundImage=`url(${Background})`
     var count = 0;
     // Tiempo respuesta
     var tmres = 2500;
@@ -76,20 +76,20 @@ const prueba = ({ setShowAlert }) => {
 
 const Chat = () => {
   const [showAlert, setShowAlert] = useState(false);
-  const [data, setData] = useState({ nameChat: "" });
+  const [data, setData] = useState({ nombre: "" ,img:""});
   const {
     state: { userData },
   } = useContext(AppContext);
 
-  const { nameChat } = data;
+  const { nombre,img } = data;
 
   useEffect(() => {
     if (userData) {
+     prueba({ setShowAlert });
       setData(userData);
     }
   }, [userData]);
 
-  prueba({ setShowAlert });
 
   return (
     <div id="general">
@@ -104,9 +104,9 @@ const Chat = () => {
       </a>
       <div id="cab">
         <div className="avatar">
-          <img alt="" src={imgAvatar} />
+          <img alt="" src={img} />
           <div className="nombre">
-            <h2>{nameChat}</h2>
+            <h2>{nombre}</h2>
           </div>
         </div>
       </div>

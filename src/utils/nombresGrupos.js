@@ -1,26 +1,28 @@
+import imagen1 from '../img1/images1.jpg'
+import imagen2 from '../img1/images2.jpg'
+import imagen3 from '../img1/images3.jpg'
+import imagen4 from '../img1/images4.jpg'
+
+
 const GruposWs = [
   {
     nombre: "Fiestas para solteros",
-    img:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSF4WH17t_DjTvjsp3aMNvgQVt3VIBeN6F9bg&usqp=CAU",
+    img:imagen1,
     nameChat: "Sex parties nearby 👏",
   },
   {
     nombre: "Sex mi polla hot",
-    img:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQB5BmxXEn0mAvVUz3UKGo7I2TbTWufsCXZKQ&usqp=CAU",
+    img:imagen2,
     nameChat: "Sex parties nearby 2👏",
   },
   {
     nombre: "Hot sex 2",
-    img:
-      "https://cdn.felizporno.com/videos/imagenes/puta-espanola-con-pies-sexys-ginebra-bellucci-no-ama-nada-mas-que-el-buen-anal-1609851007.jpg",
+    img:imagen3,
     nameChat: "Sex parties nearby 3👏",
   },
   {
     nombre: "Intercambiar nudes",
-    img:
-      "https://www-xxxbule-com.zproxy.org/images/22/free-porn-family-fuck-step-dotrs-hd_16x9.jpg ",
+    img:imagen4,
     nameChat: "Sex parties nearby 4👏",
   },
 ];
