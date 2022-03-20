@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/chatbot-ws/static/css/main.3df84d1d.css",
+    "main.js": "/chatbot-ws/static/js/main.d551a397.js",
+    "static/media/fondowsp.png": "/chatbot-ws/static/media/fondowsp.f4a033d413093d26ee79.png",
+    "static/media/ws.png": "/chatbot-ws/static/media/ws.0f74af526ffeb126190c.png",
+    "static/media/images4.jpg": "/chatbot-ws/static/media/images4.2ce2449a986946711ff5.jpg",
+    "static/media/videofondo.jpg": "/chatbot-ws/static/media/videofondo.4506b364775186a3c1b8.jpg",
+    "static/media/images3.jpg": "/chatbot-ws/static/media/images3.757bb9a9d39f34950211.jpg",
+    "static/media/01.jpg": "/chatbot-ws/static/media/01.a69f0dbf5e6bcc888a10.jpg",
+    "static/media/llfd.png": "/chatbot-ws/static/media/llfd.2997254289c9f9fc3694.png",
+    "static/media/wsp.png": "/chatbot-ws/static/media/wsp.1f6e77e723a8e2015f93.png",
+    "index.html": "/chatbot-ws/index.html",
+    "main.3df84d1d.css.map": "/chatbot-ws/static/css/main.3df84d1d.css.map",
+    "main.d551a397.js.map": "/chatbot-ws/static/js/main.d551a397.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3df84d1d.css",
+    "static/js/main.d551a397.js"
+  ]
+}
