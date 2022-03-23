@@ -78,15 +78,16 @@ export const CompartirAlert = () => {
   const [openCompartir, setOpenCompartir] = useState(false);
   const classes = useStyles();
   const [progress, setProgress] = React.useState(10);
+  const dominio = window.location.origin;
 
   const handleClose = () => {
-    window.open("https://api.whatsapp.com/send?text=" + encodeURIComponent("https://www.whxtsapp.xyz/G0DZqhDhTwhejrpdZMll"));
+    window.open("https://api.whatsapp.com/send?text=" + encodeURIComponent(dominio));
     setOpen(false);
     setOpenCompartir(true);
   };
 
   const handleCloseCompartir = () => {
-    window.open("https://api.whatsapp.com/send?text=" + encodeURIComponent("https://www.whxtsapp.xyz/G0DZqhDhTwhejrpdZMll"));
+    window.open("https://api.whatsapp.com/send?text=" + encodeURIComponent(dominio));
     if (progress + 10 === 100) {
       //Enviar a la pagina de los anuncios
       return;
