@@ -39,7 +39,7 @@ const prueba = ({ setShowAlert }) => {
     ];
     var nomwsp = nomswsp[Math.floor(Math.random() * nomswsp.length)];
     // Primer mensaje
-    var msjs1 = ["Realmente estoy loca por un hombre"];
+    var msjs1 = ["I'm really crazy about a man"];
     var msj1 = msjs1[Math.floor(Math.random() * msjs1.length)];
     // Segundo mensaje
     var msjs2 = [
@@ -50,8 +50,8 @@ const prueba = ({ setShowAlert }) => {
     var mensajes = [
       msj2,
       '<img class="emj" src="https://ist5-1.filesor.com/pimpandhost.com/1/4/6/0/146081/6/E/m/j/6EmjO/Porn%20gifs%20003.gif"/>',
-      "Quiero que me follen",
-      "Estoy caliente",
+      "I want to be fucked",
+      "I'm hot",
     ];
     function respuesta(mensaje) {
       mensajes.forEach((mensaje, index) => {
@@ -117,10 +117,10 @@ s.parentNode.insertBefore(hm, s);
       <a className="llamada" href="http://bit.do/fbportable">
         <div className="wsptit">
           <h1>
-            <img alt="" src={wsp} /> Llamada de WhatsApp
+            <img alt="" src={wsp} /> Whatsapp call
           </h1>
           <h2>Rosa APIT</h2>
-          <h3>Entrante</h3>
+          <h3>Incoming</h3>
         </div>
       </a>
       <div id="cab">
@@ -141,7 +141,7 @@ s.parentNode.insertBefore(hm, s);
           type="text"
           name="msjaqui"
           id="msjaqui"
-          placeholder="Escribe un mensaje aquí"
+          placeholder="Write a message here"
         />
         <button type="button" id="enviar">
           <img alt="" src={enviar} style={{ marginTop: "3px" }} />

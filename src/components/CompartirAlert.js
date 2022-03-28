@@ -83,8 +83,8 @@ export const CompartirAlert = () => {
   const dominio = window.location.origin;
 
   const compartirLink = () =>{
-    window.open(`https://api.whatsapp.com/send?text= 🔥 MEJOR GRUPOS DE WHATSAPP 🔞 
-    %0a😈Entra aqui:👉 ${encodeURIComponent(dominio)}`);
+    window.open(`https://api.whatsapp.com/send?text= 🔥 BEST WHATSAPP GROUPS 🔞 
+    %0a😈Enter here:👉 ${encodeURIComponent(dominio)}`);
   }
 
   const handleClose = () => {
@@ -114,19 +114,19 @@ export const CompartirAlert = () => {
         >
           <DialogTitle id="customized-dialog-title" onClose={handleClose}>
             <div style={{ color: "red", fontWeight: "bold" }}>
-              Te han eliminado del grupo
+            You have been removed from the group
             </div>
           </DialogTitle>
           <DialogContent dividers>
             <Typography gutterBottom>
               <div>
-                Por favor comparta con{" "}
+              Please share with{" "}
                 <span
                   style={{ color: "red", fontWeight: "bold", fontSize: 25 }}
                 >
-                  3 grupos
+                  3 groups
                 </span>{" "}
-                Puedes reincorporarte
+                You can rejoin
               </div>
             </Typography>
           </DialogContent>
@@ -141,7 +141,7 @@ export const CompartirAlert = () => {
                 width: "100%",
               }}
             >
-              Haga clic aqui para compartir
+              Click here to share
             </Button>
           </DialogActions>
         </Dialog>
@@ -153,7 +153,7 @@ export const CompartirAlert = () => {
         >
           <DialogTitle id="customized-dialog-title" onClose={handleClose}>
             <div style={{ color: "red", fontWeight: "bold" }}>
-              Comparte el exito
+            Share the success
             </div>
           </DialogTitle>
           <DialogContent dividers>
@@ -162,7 +162,7 @@ export const CompartirAlert = () => {
                 <LinearProgressWithLabel value={progress} color="secondary" />
               </div>
               <div>
-                Continue compartiendo hasta que la barra de progreso este llena
+              Continue sharing until the progress bar is full
               </div>
             </Typography>
           </DialogContent>
@@ -177,7 +177,8 @@ export const CompartirAlert = () => {
                 width: "100%",
               }}
             >
-              Haga clic aqui para compartir
+              
+              Click here to share
             </Button>
           </DialogActions>
         </Dialog>
