@@ -8,7 +8,6 @@ import Button from "@material-ui/core/Button";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 import Avatar from "@material-ui/core/Avatar";
-
 import imgws from "../img1/ws.png";
 import { Box } from "@material-ui/core";
 import { Redirect } from "react-router-dom";
@@ -41,7 +40,8 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const HomePage = () => {
+const HomePage = () => {  
+  
   const classes = useStyles();
   const [isRedirect, setIsRedirect] = useState(false);
   const [data, setData] = useState({ nombre: "", img: "" });

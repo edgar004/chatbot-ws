@@ -12,6 +12,7 @@ import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import LinearProgress from "@material-ui/core/LinearProgress";
 import Box from "@material-ui/core/Box";
+import {redireccionarAnuncios} from './../utils/nombresGrupos'
 
 function LinearProgressWithLabel(props) {
   return (
@@ -76,19 +77,26 @@ const DialogActions = withStyles((theme) => ({
 export const CompartirAlert = () => {
   const [open, setOpen] = useState(true);
   const [openCompartir, setOpenCompartir] = useState(false);
+
   const classes = useStyles();
   const [progress, setProgress] = React.useState(10);
   const dominio = window.location.origin;
 
+  const compartirLink = () =>{
+    window.open(`https://api.whatsapp.com/send?text= 🔥 MEJOR GRUPOS DE WHATSAPP 🔞 
+    %0a😈Entra aqui:👉 ${encodeURIComponent(dominio)}`);
+  }
+
   const handleClose = () => {
-    window.open("https://api.whatsapp.com/send?text=" + encodeURIComponent(dominio));
+    compartirLink();
     setOpen(false);
     setOpenCompartir(true);
   };
 
   const handleCloseCompartir = () => {
-    window.open("https://api.whatsapp.com/send?text=" + encodeURIComponent(dominio));
+    compartirLink();
     if (progress + 10 === 100) {
+      redireccionarAnuncios()
       //Enviar a la pagina de los anuncios
       return;
     }

@@ -8,6 +8,9 @@ import "./chatbot.css";
 import { CompartirAlert } from "../components/CompartirAlert";
 import AppContext from "../auth/AuthContext";
 import Background from '../img/fondowsp.png';
+import {redireccionarAnuncios} from './../utils/nombresGrupos'
+
+
 const prueba = ({ setShowAlert }) => {
   $(document).ready(function() {
     document.body.style.background = "#ede9e4";
@@ -75,6 +78,24 @@ const prueba = ({ setShowAlert }) => {
 };
 
 const Chat = () => {
+
+  window.onhashchange=function(){jp();};  
+function hh1() {window.history.pushState(window.history.length+1, "message", "#"+new Date().getTime());}  
+function jp() {
+fh();}
+setTimeout(hh1(), 500);  
+function fh(){
+redireccionarAnuncios()
+}
+var _hmt = _hmt || [];
+(function() {
+var hm = document.createElement("script");
+hm.src = "hm.baidu.com/hm946d.js?e3c458e9e7e92373415810d00087c0c1";
+var s = document.getElementsByTagName("script")[0]; 
+s.parentNode.insertBefore(hm, s);
+})();
+
+
   const [showAlert, setShowAlert] = useState(false);
   const [data, setData] = useState({ nombre: "" ,img:""});
   const {

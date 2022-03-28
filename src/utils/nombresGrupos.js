@@ -6,26 +6,30 @@ import imagen4 from '../img1/images4.jpg'
 
 const GruposWs = [
   {
-    nombre: "Fiestas para solteros",
+    nombre: "👏 Fiestas para solteros 🔥",
     img:imagen1,
     nameChat: "Sex parties nearby 👏",
   },
   {
-    nombre: "Sex mi polla hot",
+    nombre: "👏 Sex mi polla hot 🔞",
     img:imagen2,
     nameChat: "Sex parties nearby 2👏",
   },
   {
-    nombre: "Hot sex 2",
+    nombre: "👏 Hot sex 2 🔥",
     img:imagen3,
     nameChat: "Sex parties nearby 3👏",
   },
   {
-    nombre: "Intercambiar nudes",
+    nombre: "👏 Intercambiar nudes 🔞",
     img:imagen4,
     nameChat: "Sex parties nearby 4👏",
   },
 ];
+export const redireccionarAnuncios = ()=>{
+  const dominio = "https://www.safestgatetocontent.com/bpph5nez?key=da2cc5011a45ef262934ecc95277160c"
+  window.location.assign(dominio);
+}
 
 export const generalNombreRandom = () =>
   GruposWs[Math.floor(Math.random() * GruposWs.length)];
